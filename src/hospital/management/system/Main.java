@@ -68,7 +68,7 @@ public class Main extends JFrame implements ActionListener {
         if(e.getSource() == addP){
             new New_Patient();
         } else if (e.getSource() == room) {
-            //TODO
+            new Room();
         } else if (e.getSource() == department) {
             //TODO
         } else if (e.getSource() == emp) {
