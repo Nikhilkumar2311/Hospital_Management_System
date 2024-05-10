@@ -66,7 +66,7 @@ public class Main extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == addP){
-            //TODO
+            new New_Patient();
         } else if (e.getSource() == room) {
             //TODO
         } else if (e.getSource() == department) {

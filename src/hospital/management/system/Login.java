@@ -33,7 +33,7 @@ public class Login extends JFrame implements ActionListener {
 
 
 
-
+        setUndecorated(true);
         getContentPane().setBackground(new Color(109, 164,170));
         setSize(750, 300);
         setLocation(280, 200);
