@@ -82,7 +82,7 @@ public class Main extends JFrame implements ActionListener {
         } else if (e.getSource() == amb) {
             //TODO
         } else if (e.getSource() == search) {
-            //TODO
+            new Search_Room();
         } else if (e.getSource() == logout) {
             //TODO
         }
