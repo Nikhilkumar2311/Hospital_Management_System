@@ -25,7 +25,7 @@ public class Room extends JFrame {
         Image image = imageIcon.getImage().getScaledInstance(200,200,Image.SCALE_DEFAULT);
         ImageIcon imageIcon1 = new ImageIcon(image);
         JLabel label = new JLabel(imageIcon1);
-        label.setBounds(600,200,200,200);
+        label.setBounds(600,150,200,200);
         panel.add(label);
 
         table = new JTable();

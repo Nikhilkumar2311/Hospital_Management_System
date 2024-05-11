@@ -10,7 +10,7 @@ public class Login extends JFrame implements ActionListener {
 
     JTextField textField;
     JPasswordField passwordField;
-    JButton button, b1, b2;
+    JButton button, login, cancel;
 
     Login(){
 
@@ -27,8 +27,8 @@ public class Login extends JFrame implements ActionListener {
         label.setBounds(350, -20, 400, 300);
         add(label);
 
-        b1 = createButton("Login", 40, 140, 120, 30, "serif", 15, Font.BOLD, Color.BLACK, Color.WHITE);
-        b2 = createButton("Cancel", 180, 140, 120, 30, "serif", 15, Font.BOLD, Color.BLACK, Color.WHITE);
+        login = createButton("Login", 40, 140, 120, 30, "serif", 15, Font.BOLD, Color.BLACK, Color.WHITE);
+        cancel = createButton("Cancel", 180, 140, 120, 30, "serif", 15, Font.BOLD, Color.BLACK, Color.WHITE);
 
 
 
@@ -82,7 +82,7 @@ public class Login extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        if (e.getSource() == b1){
+        if (e.getSource() == login){
             try{
                 Conn c = new Conn();
                 String user = textField.getText();
@@ -102,7 +102,7 @@ public class Login extends JFrame implements ActionListener {
                 E.printStackTrace();
             }
 
-        } else {
+        } else if (e.getSource() == cancel) {
             System.exit(10);
         }
 

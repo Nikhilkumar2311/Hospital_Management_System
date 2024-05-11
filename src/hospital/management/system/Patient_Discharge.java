@@ -22,6 +22,13 @@ public class Patient_Discharge extends JFrame implements ActionListener {
         panel.setLayout(null);
         add(panel);
 
+        ImageIcon imageIcon = new ImageIcon(ClassLoader.getSystemResource("icon/discharge.png"));
+        Image image = imageIcon.getImage().getScaledInstance(200, 200, Image.SCALE_DEFAULT);
+        ImageIcon imageIcon1 = new ImageIcon(image);
+        JLabel label = new JLabel(imageIcon1);
+        label.setBounds(550, 100, 200, 200);
+        panel.add(label);
+
         createlabel("CHECK-OUT", 100,20,150,20,"Tahoma", Font.BOLD, 20);
         createlabel("Customer Id", 30,80,150,20,"Tahoma", Font.BOLD, 14);
 

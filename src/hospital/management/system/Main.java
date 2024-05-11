@@ -78,7 +78,7 @@ public class Main extends JFrame implements ActionListener {
         } else if (e.getSource() == pDis) {
             new Patient_Discharge();
         } else if (e.getSource() == update) {
-            //TODO
+            new Patient_Update();
         } else if (e.getSource() == amb) {
             //TODO
         } else if (e.getSource() == search) {
