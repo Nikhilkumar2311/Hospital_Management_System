@@ -14,11 +14,11 @@ public class Login extends JFrame implements ActionListener {
 
     Login(){
 
-        createLabel("Username", 40, 20, 100, 30, "Tahoma", 16, Font.BOLD, Color.BLACK);
-        createLabel("Password", 40, 70, 100, 30, "Tahoma", 16, Font.BOLD, Color.BLACK);
+        createLabel("Username", 40, 50, 100, 30, "Tahoma", 16, Font.BOLD, Color.BLACK);
+        createLabel("Password", 40, 100, 100, 30, "Tahoma", 16, Font.BOLD, Color.BLACK);
 
-        createField(150, 20, 150, 30, "Tahoma", 15, Font.PLAIN, 255, 179, 0);
-        createpassField(150, 70, 150, 30, "Tahoma", 15, Font.PLAIN, 255, 179, 0);
+        createField(150, 50, 150, 30, "Tahoma", 15, Font.PLAIN, 255, 179, 0);
+        createpassField(150, 100, 150, 30, "Tahoma", 15, Font.PLAIN, 255, 179, 0);
 
         ImageIcon imageIcon = new ImageIcon(ClassLoader.getSystemResource("icon/logo.png"));
         Image image = imageIcon.getImage().getScaledInstance(300, 300, Image.SCALE_DEFAULT);
@@ -27,8 +27,9 @@ public class Login extends JFrame implements ActionListener {
         label.setBounds(350, -20, 400, 300);
         add(label);
 
-        login = createButton("Login", 40, 140, 120, 30, "serif", 15, Font.BOLD, Color.BLACK, Color.WHITE);
-        cancel = createButton("Cancel", 180, 140, 120, 30, "serif", 15, Font.BOLD, Color.BLACK, Color.WHITE);
+        // Buttons
+        login = createButton("Login", 40, 180, 120, 30, "serif", 15, Font.BOLD, Color.BLACK, Color.WHITE);
+        cancel = createButton("Cancel", 180, 180, 120, 30, "serif", 15, Font.BOLD, Color.BLACK, Color.WHITE);
 
 
 

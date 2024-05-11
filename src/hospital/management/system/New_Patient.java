@@ -94,6 +94,7 @@ public class New_Patient extends JFrame implements ActionListener {
         createLabel("Deposite : ", 35, 359, 200, 18, "Tahoma", 14, Font.BOLD, Color.WHITE);
         textDeposite = createField(271, 359, 150, 20);
 
+        // Buttons
         Add = createButton("ADD", 100, 430, 120, 30, Color.BLACK, Color.WHITE);
         Back = createButton("BACK", 260, 430, 120, 30, Color.BLACK, Color.WHITE);
 

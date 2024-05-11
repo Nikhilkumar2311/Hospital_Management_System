@@ -80,11 +80,19 @@ public class Main extends JFrame implements ActionListener {
         } else if (e.getSource() == update) {
             new Patient_Update();
         } else if (e.getSource() == amb) {
-            //TODO
+            new Ambulance();
         } else if (e.getSource() == search) {
             new Search_Room();
         } else if (e.getSource() == logout) {
-            //TODO
+            Logout();
+        }
+    }
+    private void Logout() {
+        String[] options = {"Confirm", "Cancel"};
+        int response = JOptionPane.showOptionDialog(this, "Are you really sure you want to logout?", "Logout Confirmation", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+        if (response == JOptionPane.YES_OPTION) {
+            setVisible(false);
+            new Login();
         }
     }
 
