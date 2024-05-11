@@ -8,12 +8,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 
-public class Room extends JFrame {
+public class Department extends JFrame {
 
     JPanel panel;
     JTable table;
 
-    Room(){
+    Department(){
 
         panel = new JPanel();
         panel.setBounds(5,5,890,590);
@@ -21,22 +21,22 @@ public class Room extends JFrame {
         panel.setLayout(null);
         add(panel);
 
-        ImageIcon imageIcon = new ImageIcon(ClassLoader.getSystemResource("icon/room.png"));
-        Image image = imageIcon.getImage().getScaledInstance(200,200,Image.SCALE_DEFAULT);
+        ImageIcon imageIcon = new ImageIcon(ClassLoader.getSystemResource("icon/dept.png"));
+        Image image = imageIcon.getImage().getScaledInstance(250,250,Image.SCALE_DEFAULT);
         ImageIcon imageIcon1 = new ImageIcon(image);
         JLabel label = new JLabel(imageIcon1);
         label.setBounds(600,200,200,200);
         panel.add(label);
 
         table = new JTable();
-        table.setBounds(10,40,500,300);
+        table.setBounds(10,80,500,200);
         table.setBackground(new Color(90,156,163));
         panel.add(table);
 
         try{
 
             Conn c = new Conn();
-            String q = "Select * from room";
+            String q = "Select * from department";
             ResultSet resultSet = c.statement.executeQuery(q);
             table.setModel(DbUtils.resultSetToTableModel(resultSet));
 
@@ -44,10 +44,8 @@ public class Room extends JFrame {
             e.printStackTrace();
         }
 
-        createlabel("Room No", 12,15,80,20,"Tahoma", Font.BOLD, 14);
-        createlabel("Availability", 135,15,80,20,"Tahoma", Font.BOLD, 14);
-        createlabel("Price", 260,15,80,20,"Tahoma", Font.BOLD, 14);
-        createlabel("Room Type", 385,15,80,20,"Tahoma", Font.BOLD, 14);
+        createlabel("Department", 50,45,200,20,"Tahoma", Font.BOLD, 14);
+        createlabel("Phone Number", 300,45,200,20,"Tahoma", Font.BOLD, 14);
 
         JButton button = new JButton("Back");
         button.setBounds(200,400,120,30);
@@ -60,7 +58,6 @@ public class Room extends JFrame {
                 setVisible(false);
             }
         });
-
 
         setUndecorated(true);
         setSize(900,600);
@@ -79,6 +76,6 @@ public class Room extends JFrame {
     }
 
     public static void main(String[] args) {
-        new Room();
+        new Department();
     }
 }

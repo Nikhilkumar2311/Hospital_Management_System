@@ -70,7 +70,7 @@ public class Main extends JFrame implements ActionListener {
         } else if (e.getSource() == room) {
             new Room();
         } else if (e.getSource() == department) {
-            //TODO
+            new Department();
         } else if (e.getSource() == emp) {
             //TODO
         } else if (e.getSource() == pInfo) {
