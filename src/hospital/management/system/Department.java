@@ -16,7 +16,7 @@ public class Department extends JFrame {
     Department(){
 
         panel = new JPanel();
-        panel.setBounds(5,5,890,590);
+        panel.setBounds(5,5,890,510);
         panel.setBackground(new Color(90,156,163));
         panel.setLayout(null);
         add(panel);

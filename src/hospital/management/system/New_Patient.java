@@ -21,7 +21,7 @@ public class New_Patient extends JFrame implements ActionListener {
     New_Patient(){
 
         panel = new JPanel();
-        panel.setBounds(5, 5, 840, 540);
+        panel.setBounds(5, 5, 840, 510);
         panel.setBackground(new Color(90, 156, 163));
         panel.setLayout(null);
         add(panel);
@@ -69,7 +69,7 @@ public class New_Patient extends JFrame implements ActionListener {
         c1 = new Choice();
         try{
             Conn c = new Conn();
-            ResultSet resultSet = c.statement.executeQuery("select * from Room");
+            ResultSet resultSet = c.statement.executeQuery("select * from Room where Availability = 'Available'");
             while(resultSet.next()){
                 c1.add(resultSet.getString("Room_no"));
             }
@@ -95,7 +95,7 @@ public class New_Patient extends JFrame implements ActionListener {
         textDeposite = createField(271, 359, 150, 20);
 
         Add = createButton("ADD", 100, 430, 120, 30, Color.BLACK, Color.WHITE);
-        Back = createButton("BACk", 260, 430, 120, 30, Color.BLACK, Color.WHITE);
+        Back = createButton("BACK", 260, 430, 120, 30, Color.BLACK, Color.WHITE);
 
         setUndecorated(true);
         setSize(850, 550);
@@ -173,7 +173,7 @@ public class New_Patient extends JFrame implements ActionListener {
                 E.printStackTrace();
             }
 
-        }else {
+        }else if(e.getSource() == Back) {
             setVisible(false);
         }
 

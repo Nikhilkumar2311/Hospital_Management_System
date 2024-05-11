@@ -15,7 +15,7 @@ public class Patient_Info extends JFrame {
 
     Patient_Info(){
         panel = new JPanel();
-        panel.setBounds(5,5,1100,590);
+        panel.setBounds(5,5,1090,510);
         panel.setBackground(new Color(90,156,163));
         panel.setLayout(null);
         add(panel);
