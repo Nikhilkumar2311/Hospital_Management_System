@@ -42,6 +42,7 @@ public class Main extends JFrame implements ActionListener {
         setSize(1950, 1090);
         setLayout(null);
         getContentPane().setBackground(Color.WHITE);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
 
