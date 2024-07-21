@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 public class Main extends JFrame implements ActionListener {
 
     JPanel p1, p2;
-    JButton button, addP, room, department, emp, pInfo, pDis, update, amb, search, logout;
+    JButton button, addP, room, department, emp, pInfo, pDis, update, amb, search, ai, logout;
 
     Main(){
 
@@ -34,7 +34,8 @@ public class Main extends JFrame implements ActionListener {
         update = createButton("Update Patient Details", 510, 15);
         amb = createButton("Hospital Ambulance", 510, 58);
         search = createButton("Search Room", 510, 100);
-        logout = createButton("Logout", 750, 15);
+        ai = createButton("Chatbot", 750, 15);
+        logout = createButton("Logout", 750, 58);
 
 
 
@@ -84,6 +85,8 @@ public class Main extends JFrame implements ActionListener {
             new Ambulance();
         } else if (e.getSource() == search) {
             new Search_Room();
+        } else if (e.getSource() == ai) {
+            new Chatbot();
         } else if (e.getSource() == logout) {
             Logout();
         }
